@@ -34,10 +34,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-       &lt 2 TAB  &kp Q  &kp W                  &kp E                &kp R                 &lt 2 T                    &lt 2 Y                    &kp U                    &kp I    &kp O     &kp P        &lt 2 ESC
-     &lt 1 EQUAL  &kp A  &kp S           &mt LSHIFT D                &kp F                 &lt 1 G                    &lt 1 H                    &kp J        &mt RIGHT_SHIFT K    &kp L  &kp SEMI        &lt 1 SQT
-&mt LSHIFT MINUS  &kp Z  &kp X                  &kp C                &kp V            &mt LSHIFT B               &mt RSHIFT N                    &kp M                &kp COMMA  &kp DOT  &kp FSLH  &mt RSHIFT PIPE
-                                &new_behavior LCTRL 1  &mt LEFT_ALT DELETE  &mt LEFT_COMMAND SPACE    &mt RIGHT_COMMAND ENTER  &mt RIGHT_ALT BACKSPACE  &mt RCTRL RIGHT_BRACKET
+       &lt 2 TAB    &kp Q    &kp W                  &kp E                &kp R                 &lt 2 T                    &lt 2 Y                    &kp U                  &kp I    &kp O            &kp P        &lt 2 ESC
+     &lt 1 EQUAL  &lt 4 A  &lt 3 S           &mt LSHIFT D                &kp F                 &lt 1 G                    &lt 1 H                    &kp J      &mt RIGHT_SHIFT K  &lt 3 L  &lt 4 SEMICOLON        &lt 1 SQT
+&mt LSHIFT MINUS    &kp Z    &kp X                  &kp C                &kp V            &mt LSHIFT B               &mt RSHIFT N                    &kp M              &kp COMMA  &kp DOT         &kp FSLH  &mt RSHIFT PIPE
+                                    &new_behavior LCTRL 2  &mt LEFT_ALT DELETE  &mt LEFT_COMMAND SPACE    &mt RIGHT_COMMAND ENTER  &mt RIGHT_ALT BACKSPACE  &new_behavior RCTRL 1
             >;
         };
 
@@ -49,10 +49,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-    &kp F1        &kp F2        &kp F3                &kp F4                &kp F5        &kp F6      &kp F7        &kp F8           &kp F9    &kp F10        &kp F11          &kp F12
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1          &bt BT_SEL 2          &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT      &kp DOWN           &kp UP  &kp RIGHT  &kp PAGE_DOWN      &kp PAGE_UP
- &kp LSHFT  &kp NUMBER_1        &kp N2                &kp N3                &kp N4        &kp N5      &kp N6        &kp N7           &kp N8     &kp N9         &kp N0  &kp RIGHT_SHIFT
-                                        &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC      &kp HOME     &kp END  &kp K_VOL_DN  &kp K_VOLUME_UP
+    &kp F1        &kp F2        &kp F3                 &kp F4                  &kp F5             &kp F6          &kp F7             &kp F8                 &kp F9    &kp F10        &kp F11          &kp F12
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1           &bt BT_SEL 2            &bt BT_SEL 3       &bt BT_SEL 4        &kp LEFT           &kp DOWN                 &kp UP  &kp RIGHT  &kp PAGE_DOWN      &kp PAGE_UP
+ &kp LSHFT  &kp NUMBER_1        &kp N2                 &kp N3                  &kp N4             &kp N5          &kp N6             &kp N7                 &kp N8     &kp N9         &kp N0  &kp RIGHT_SHIFT
+                                        &new_behavior LCTRL 0  &mt LALT K_VOLUME_DOWN  &mt LS(LGUI) HOME    &mt RGUI END  &mt RALT K_VOL_UP  &new_behavior RCTRL 2
             >;
         };
 
@@ -64,10 +64,28 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-  &kp TAB  &kp EXCL  &kp AT  &kp HASH  &kp DLLR   &kp PRCNT    &kp CARET   &kp AMPS  &kp KP_MULTIPLY  &kp LPAR  &kp RPAR   &kp BSPC
-&kp LCTRL    &trans  &trans    &trans    &trans      &trans    &kp MINUS  &kp EQUAL         &kp LBKT  &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT    &trans  &trans    &trans    &trans      &trans    &kp UNDER   &kp PLUS         &kp LBRC  &kp RBRC  &kp PIPE  &kp TILDE
-                             &kp LGUI    &trans  &kp INSERT      &kp RET     &trans         &kp RALT
+  &kp TAB  &kp EXCL  &kp AT               &kp HASH  &kp DLLR        &kp PRCNT             &kp CARET   &kp AMPS        &kp KP_MULTIPLY  &kp LPAR  &kp RPAR   &kp BSPC
+&kp LCTRL    &trans  &trans                 &trans    &trans           &trans             &kp MINUS  &kp EQUAL               &kp LBKT  &kp RBKT  &kp BSLH  &kp GRAVE
+&kp LSHFT    &trans  &trans                 &trans    &trans           &trans             &kp UNDER   &kp PLUS               &kp LBRC  &kp RBRC  &kp PIPE  &kp TILDE
+                             &new_behavior LCTRL 1    &trans  &mt LGUI INSERT    &mt RGUI K_EXECUTE     &trans  &new_behavior RCTRL 0
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+&trans  &trans           &trans  &trans             &trans                &trans                  &trans        &trans  &trans           &trans           &trans  &kp K_POWER
+&trans  &trans  &kp PRINTSCREEN  &trans             &trans                &trans                  &trans        &trans  &trans  &kp PRINTSCREEN  &kp PRINTSCREEN  &kp K_SLEEP
+&trans  &trans           &trans  &trans  &kp K_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC    &kp C_BRIGHTNESS_INC  &kp K_VOL_UP  &trans           &trans           &trans   &kp K_LOCK
+                                 &trans             &trans                &trans                  &trans        &trans  &trans
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
