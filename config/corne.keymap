@@ -33,11 +33,11 @@
         };
     };
 
-    &mt {
+    mt {
         tapping-term-ms = <400>;
     };
 
-    &lt {
+    lt {
         tapping-term-ms = <400>;
     };
 
