@@ -55,13 +55,15 @@
     };
 
 		mmv {
-			time-to-max-speed-ms = <400>;             /* <--- How long time until max speed is reached (default: 500) */
+			time-to-max-speed-ms = <200>;             /* <--- How long time until max speed is reached (default: 500) */
 		};
     mt {
+				quick-tap-ms = <200>;
         tapping-term-ms = <400>;
     };
 
     lt {
+				quick-tap-ms = <200>;
         tapping-term-ms = <400>;
     };
 
@@ -69,14 +71,9 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-            //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-             &lt 2 TAB    &kp Q    &kp W               &kp E         &kp R                 &lt 2 T                    &lt 2 Y            &kp U                 &kp I              &kp O            &kp P               &lt 2 ESC
+             &lt 1 TAB    &kp Q    &kp W               &kp E         &kp R                 &lt 2 T                    &lt 2 Y            &kp U                 &kp I              &kp O            &kp P               &lt 2 ESC
 &mt LEFT_CONTROL GRAVE  &lt 4 A  &lt 3 S        &mt LSHIFT D         &kp F                 &lt 1 G                    &lt 1 H            &kp J     &mt RIGHT_SHIFT K            &lt 3 L  &lt 4 SEMICOLON  &mt RCTRL SINGLE_QUOTE
       &mt LSHIFT MINUS    &kp Z    &kp X               &kp C         &kp V            &mt LSHIFT B               &mt RSHIFT N            &kp M      &kp LEFT_BRACKET  &kp RIGHT_BRACKET         &kp FSLH         &mt RSHIFT PIPE
                                           &mt LEFT_ALT COMMA  &lt 2 DELETE  &mt LEFT_COMMAND SPACE    &mt RIGHT_COMMAND ENTER  &lt 1 BACKSPACE  &mt RIGHT_ALT PERIOD
@@ -84,15 +81,9 @@
         };
 
         lower_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
             bindings = <
 &kp PG_UP    &kp UP_ARROW    &kp K_SCROLL_UP  &kp N1  &kp NUMBER_2         &kp N3          &kp F1  &kp F2            &kp F3   &kp F4   &kp F5           &kp F6
- &kp LEFT  &kp DOWN_ARROW    &kp RIGHT_ARROW  &kp N4        &kp N5         &kp N6          &kp F7  &kp F8            &kp F9  &kp F10  &kp F11          &kp F12
+ &kp LEFT  &kp DOWN_ARROW    &kp RIGHT_ARROW  &kp N4        &kp N5         &kp N6          &kp LEFT_ARROW  &kp DOWN_ARROW            &kp UP_ARROW  &kp RIGHT_ARROW  &kp PG_DOWN          &kp PG_UP
 &kp PG_DN    &kp NUMBER_1  &kp K_SCROLL_DOWN  &kp N7        &kp N8         &kp N9          &kp N6  &kp N7            &kp N8   &kp N9   &kp N0  &kp RIGHT_SHIFT
                                               &kp N0        &kp N0  &mt LGUI HOME    &mt RGUI END  &trans  &tog_mod RCTRL 2
             >;
