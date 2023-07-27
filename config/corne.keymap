@@ -145,7 +145,7 @@
 &mmv SCROLL_LEFT  &mmv SCROLL_DOWN  &mmv SCROLL_LEFT  &mmv SCROLL_DOWN  &mmv SCROLL_UP  &mmv SCROLL_RIGHT    &mmv SCROLL_LEFT  &mmv SCROLL_DOWN  &mmv SCROLL_UP  &mmv SCROLL_RIGHT  &trans  &trans
 &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
 &mmv SCROLL_LEFT  &mmv SCROLL_DOWN  &mmv SCROLL_LEFT  &mmv SCROLL_DOWN  &mmv SCROLL_UP  &mmv SCROLL_RIGHT    &mmv SCROLL_LEFT  &mmv SCROLL_DOWN  &mmv SCROLL_UP  &mmv SCROLL_RIGHT  &trans  &trans
-                                                        &trans        &trans        &mkp LCLK         &mkp RCLK          &trans        &trans
+                                                        &mkp RCLK        &mkp MCLK        &mkp LCLK         &mkp LCLK          &mkp MCLK        &mkp RCLK
             >;
         };
     };
