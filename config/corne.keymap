@@ -149,13 +149,5 @@
             >;
         };
 
-        gaming_layer {
-            bindings = <
-          &kp N0   &kp Q   &kp W              &kp N1        &kp N2     &kp N3    &mmv SCROLL_LEFT  &mmv SCROLL_DOWN  &mmv SCROLL_UP  &mmv SCROLL_RIGHT  &tog 7  &kp ESC
-&mt LEFT_CONTROL   &kp A   &kp S        &mt LSHIFT D        &kp N4      &kp G    &mmv SCROLL_LEFT  &mmv SCROLL_DOWN  &mmv SCROLL_UP  &mmv SCROLL_RIGHT  &trans   &trans
-&mt LSHIFT MINUS  &kp N5  &kp N6              &kp N7        &kp N8     &kp N9    &mmv SCROLL_LEFT  &mmv SCROLL_DOWN  &mmv SCROLL_UP  &mmv SCROLL_RIGHT  &trans   &trans
-                                  &mt LEFT_ALT COMMA  &lt 2 DELETE  &kp SPACE           &kp ENTER       &mkp 1 LCLK       &mkp LCLK
-            >;
-        };
     };
 };
