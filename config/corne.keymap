@@ -52,7 +52,9 @@
             tapping-term-ms = <150>;
             quick-tap-ms = <500>;
             flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
+            bindings =
+                <&kp>,
+                <&kp>;
         };
         hl: homerow_layers {
             compatible = "zmk,behavior-hold-tap";
@@ -61,7 +63,9 @@
             tapping-term-ms = <150>;
             quick-tap-ms = <500>;
             flavor = "tap-preferred";
-            bindings = <&mo>, <&kp>;
+            bindings =
+                <&mo>,
+                <&kp>;
         };
         tog_mod: tog_mod {
             compatible = "zmk,behavior-hold-tap";
@@ -106,9 +110,9 @@
 
         default_layer {
             bindings = <
-   &hl 1 ESCAPE            &kp Q    &kp W               &kp E       &hl 5 R                 &hl 2 T                    &hl 2 Y            &kp U                 &kp I    &kp O            &kp P   &hl 2 BACKSLASH
-      &hl 1 TAB          &hl 4 A  &hl 3 S        &hm LSHIFT D         &kp F                 &hl 1 G                    &hl 1 H            &kp J     &hm RIGHT_SHIFT K  &hl 3 L  &hl 4 SEMICOLON  &hl 2 APOSTROPHE
-&hm LSHIFT PLUS  &hm LCTRL MINUS    &kp Z               &kp X       &hl 6 C            &hm LSHIFT V               &hm RSHIFT B          &hl 6 N               &hl 6 M    &none   &hm RCTRL FSLH  &hm RSHIFT GRAVE
+      &hl 1 TAB            &kp Q    &kp W               &kp E       &hl 5 R                 &hl 2 T                    &hl 2 Y            &kp U                 &kp I          &kp O            &kp P      &hl 2 ESCAPE
+&hl 1 BACKSLASH          &hl 4 A  &hl 3 S        &hm LSHIFT D         &kp F                 &hl 1 G                    &hl 1 H            &kp J     &hm RIGHT_SHIFT K        &hl 3 L  &hl 4 SEMICOLON  &hl 2 APOSTROPHE
+&hm LSHIFT PLUS  &hm LCTRL MINUS    &kp Z               &kp X       &hl 6 C            &hm LSHIFT V               &hm RSHIFT B          &hl 6 N               &hl 6 M  &kp BACKSLASH   &hm RCTRL FSLH  &hm RSHIFT GRAVE
                                            &hm LEFT_ALT COMMA  &hl 2 DELETE  &hm LEFT_COMMAND SPACE    &hm RIGHT_COMMAND ENTER  &hl 1 BACKSPACE  &hm RIGHT_ALT PERIOD
             >;
         };
@@ -142,19 +146,19 @@
 
         application_layer {
             bindings = <
-     &mkp LCLK    &mmv MOVE_UP        &mkp RCLK  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-        &trans          &trans           &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                                                 &trans  &trans  &trans    &trans  &trans  &trans
+     &mkp LCLK    &mmv MOVE_UP        &mkp RCLK         &trans  &kp K_REDO       &trans           &trans  &trans  &trans  &trans  &trans  &trans
+&mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp C_AC_SAVE  &kp K_FIND       &trans           &trans  &trans  &trans  &trans  &trans  &trans
+        &trans          &trans       &kp K_UNDO      &kp K_CUT  &kp K_COPY  &kp K_PASTE           &trans  &trans  &trans  &trans  &trans  &trans
+                                                        &trans      &trans       &trans    &kp K_EXECUTE  &trans  &trans
             >;
         };
 
         quick_app_layer {
             bindings = <
-&trans  &trans  &trans  &kp C_AL_TEXT_EDITOR  &trans             &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans                &trans  &trans             &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans                &trans  &trans             &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                                      &trans  &trans  &kp K_APPLICATION    &kp K_CANCEL  &trans  &trans
+&trans  &trans  &trans  &kp C_AL_TEXT_EDITOR      &trans             &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans                &trans      &trans             &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans                &trans  &kp K_CALC             &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                                      &trans      &trans  &kp K_APPLICATION    &kp K_CANCEL  &trans  &trans
             >;
         };
 
