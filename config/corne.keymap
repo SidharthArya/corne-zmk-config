@@ -50,7 +50,7 @@
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
-            quick-tap-ms = <500>;
+            quick-tap-ms = <150>;
             flavor = "tap-preferred";
             bindings =
                 <&kp>,
@@ -61,7 +61,7 @@
             label = "HOMEROW_LAYERS";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
-            quick-tap-ms = <500>;
+            quick-tap-ms = <150>;
             flavor = "tap-preferred";
             bindings =
                 <&mo>,
@@ -112,7 +112,7 @@
             bindings = <
       &hl 1 TAB            &kp Q    &kp W               &kp E       &hl 5 R                 &hl 2 T                    &hl 2 Y            &kp U                 &kp I          &kp O            &kp P      &hl 2 ESCAPE
 &hl 1 BACKSLASH          &hl 4 A  &hl 3 S        &hm LSHIFT D         &kp F                 &hl 1 G                    &hl 1 H            &kp J     &hm RIGHT_SHIFT K        &hl 3 L  &hl 4 SEMICOLON  &hl 2 APOSTROPHE
-&hm LSHIFT PLUS  &hm LCTRL MINUS    &kp Z               &kp X       &hl 6 C            &hm LSHIFT V               &hm RSHIFT B          &hl 6 N               &hl 6 M  &kp BACKSLASH   &hm RCTRL FSLH  &hm RSHIFT GRAVE
+&hm LSHIFT MINUS  &hm LCTRL PLUS    &kp Z               &kp X       &hl 6 C            &hm LSHIFT V               &hm RSHIFT B          &hl 6 N               &hl 6 M  &kp BACKSLASH   &hm RCTRL FSLH  &hm RSHIFT GRAVE
                                            &hm LEFT_ALT COMMA  &hl 2 DELETE  &hm LEFT_COMMAND SPACE    &hm RIGHT_COMMAND ENTER  &hl 1 BACKSPACE  &hm RIGHT_ALT PERIOD
             >;
         };
