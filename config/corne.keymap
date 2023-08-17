@@ -173,10 +173,10 @@
 
         layer_7 {
             bindings = <
-    &kp G      &kp L  &kp W  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &trans  &trans  &trans  &trans  &tog 7  &trans
-    &kp H      &kp A  &kp S         &kp D  &kp NUMBER_4  &kp NUMBER_5    &trans  &trans  &trans  &trans  &trans  &trans
-&kp LSHFT  &kp LCTRL  &kp Z  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8    &trans  &trans  &trans  &trans  &trans  &trans
-                                    &kp X         &kp C     &kp SPACE    &trans  &trans  &trans
+    &kp G  &kp Q  &kp W  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &trans  &trans  &trans  &trans  &tog 7  &trans
+    &kp H  &kp A  &kp S         &kp D  &kp NUMBER_4  &kp NUMBER_5    &trans  &trans  &trans  &trans  &trans  &trans
+&kp LCTRL  &kp L  &kp Z  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8    &trans  &trans  &trans  &trans  &trans  &trans
+                                &kp X         &kp C     &kp SPACE    &trans  &trans  &trans
             >;
         };
     };
