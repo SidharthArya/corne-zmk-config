@@ -89,6 +89,17 @@
             tapping-term-ms = <400>;
             quick-tap-ms = <200>;
         };
+        grave_tab: grave_tab {
+            compatible = "zmk,behavior-mod-morph";
+            label = "GRAVE_TAB";
+            bindings =
+                <&kp GRAVE>,
+                <&kp TAB>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
+        };
     };
 
     mmv {
@@ -124,7 +135,7 @@
 
         default_layer {
             bindings = <
-&hl 3 GRAVE       &kp Q            &kp W        &hl 5 E         &hl 5 R       &hl 1 T                   &hl 2 Y                  &kp U            &hl 5 I          &kp O        &kp P             &hl 3 BACKSLASH
+&grave_tab        &hl 3 Q          &kp W        &hl 5 E         &hl 5 R       &hl 1 T                   &hl 2 Y                  &kp U            &hl 5 I          &kp O        &kp P             &hl 3 BACKSLASH
 &hl 2 PLUS        &hl 4 A          &hm LCTRL S  &hm LEFT_ALT D  &hm LGUI F    &hl 2 G                   &hl 1 H                  &hm RGUI J       &hm RALT K       &hm RCTRL L  &hl 4 SEMICOLON   &hl 1 APOSTROPHE
 &hm LSHIFT MINUS  &hm LCTRL COMMA  &kp Z        &kp X           &hl 6 C       &hm LSHIFT V              &hm RSHIFT B             &hl 6 N          &hl 6 M          &kp TILDE    &hm RCTRL PERIOD  &hm RSHIFT SLASH
                                                 &hm LALT TAB    &hl 2 DELETE  &hm LEFT_COMMAND SPACE    &hm RIGHT_COMMAND ENTER  &hl 1 BACKSPACE  &hm RALT ESCAPE
