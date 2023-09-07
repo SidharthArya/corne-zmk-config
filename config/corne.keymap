@@ -137,7 +137,7 @@
             bindings = <
 &grave_tab        &hl 3 Q          &kp W        &hl 5 E         &hl 5 R       &hl 1 T                   &hl 2 Y                  &kp U            &hl 5 I          &kp O        &kp P             &hl 3 BACKSLASH
 &hl 2 PLUS        &hl 4 A          &hm LCTRL S  &hm LEFT_ALT D  &hm LGUI F    &hl 2 G                   &hl 1 H                  &hm RGUI J       &hm RALT K       &hm RCTRL L  &hl 4 SEMICOLON   &hl 1 APOSTROPHE
-&hm LSHIFT MINUS  &hm LCTRL COMMA  &kp Z        &kp X           &hl 6 C       &hm LSHIFT V              &hm RSHIFT B             &hl 6 N          &hl 6 M          &kp TILDE    &hm RCTRL PERIOD  &hm RSHIFT SLASH
+&hm LSHIFT MINUS  &hm LCTRL COMMA  &kp Z        &kp X           &hl 4 C       &hm LSHIFT V              &hm RSHIFT B             &hl 4 N          &hl 4 M          &kp TILDE    &hm RCTRL PERIOD  &hm RSHIFT SLASH
                                                 &hm LALT TAB    &hl 2 DELETE  &hm LEFT_COMMAND SPACE    &hm RIGHT_COMMAND ENTER  &hl 1 BACKSPACE  &hm RALT ESCAPE
             >;
         };
@@ -162,7 +162,7 @@
 
         system_layer {
             bindings = <
-&kp K_POWER  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3       &bt BT_SEL 4                &trans                &trans        &trans     &trans           &tog 7           &kp K_POWER
+&kp K_POWER  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3       &bt BT_SEL 4                &trans                &trans        &trans     &trans           &tog 6           &kp K_POWER
 &kp K_SLEEP  &bt BT_CLR    &kp PRINTSCREEN  &kp PSCRN     &kp K_VOL_UP       &kp LS(C_BRIGHTNESS_INC)    &kp C_BRIGHTNESS_INC  &kp K_VOL_UP  &kp PSCRN  &kp PRINTSCREEN  &kp PRINTSCREEN  &kp K_SLEEP
 &kp K_LOCK   &kp SYSREQ    &kp PRIOR        &kp K_MUTE    &kp K_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC        &kp C_BRIGHTNESS_DEC  &kp K_VOL_DN  &trans     &trans           &trans           &kp K_LOCK
                                             &trans        &trans             &trans                      &trans                &trans        &trans
@@ -187,18 +187,9 @@
             >;
         };
 
-        mouse_emulation_layer {
-            bindings = <
-&mmv SCROLL_LEFT  &mmv SCROLL_DOWN  &mmv SCROLL_LEFT  &mmv SCROLL_DOWN  &mmv SCROLL_UP  &mmv SCROLL_RIGHT    &mmv SCROLL_LEFT  &mmv SCROLL_DOWN  &mmv SCROLL_UP  &mmv SCROLL_RIGHT  &trans  &trans
-&mmv MOVE_LEFT    &mmv MOVE_DOWN    &mmv MOVE_LEFT    &mmv MOVE_DOWN    &mmv MOVE_UP    &mmv MOVE_RIGHT      &mmv MOVE_LEFT    &mmv MOVE_DOWN    &mmv MOVE_UP    &mmv MOVE_RIGHT    &trans  &trans
-&mmv SCROLL_LEFT  &mmv SCROLL_DOWN  &mmv SCROLL_LEFT  &mmv SCROLL_DOWN  &mmv SCROLL_UP  &mmv SCROLL_RIGHT    &mmv SCROLL_LEFT  &mmv SCROLL_DOWN  &mmv SCROLL_UP  &mmv SCROLL_RIGHT  &trans  &trans
-                                                      &mkp RCLK         &mkp MCLK       &mkp LCLK            &mkp LCLK         &mkp MCLK         &mkp RCLK
-            >;
-        };
-
         layer_7 {
             bindings = <
-&kp G      &kp Q  &kp W  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &trans  &trans  &trans  &trans  &tog 7  &trans
+&kp G      &kp Q  &kp W  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &trans  &trans  &trans  &trans  &tog 6  &trans
 &kp H      &kp A  &kp S  &kp D         &kp NUMBER_4  &kp NUMBER_5    &trans  &trans  &trans  &trans  &trans  &trans
 &kp LCTRL  &kp L  &kp Z  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8    &trans  &trans  &trans  &trans  &trans  &trans
                          &kp X         &kp C         &kp SPACE       &trans  &trans  &trans
