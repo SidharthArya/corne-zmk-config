@@ -105,6 +105,20 @@
         tapping-term-ms = <200>;
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        quick_super_tab {
+            bindings = <&kp LG(TAB)>;
+            key-positions = <38 0>;
+        };
+
+        quick_super_escape {
+            bindings = <&kp RG(ESCAPE)>;
+            key-positions = <39 11>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
