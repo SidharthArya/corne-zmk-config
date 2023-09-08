@@ -80,11 +80,10 @@
             label = "BACKSLASH_ESCAPE";
             bindings =
                 <&kp BACKSLASH>,
-                <&kp ESCAPE>;
+                <&kp RG(ESCAPE)>;
 
             #binding-cells = <0>;
             mods = <(MOD_RGUI|MOD_LGUI)>;
-            keep-mods = <(MOD_LGUI)>;
         };
     };
 
@@ -150,7 +149,7 @@
             bindings = <
 &kp K_POWER  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3       &bt BT_SEL 4                &trans                &trans        &trans     &trans           &tog 6           &kp K_POWER
 &kp K_SLEEP  &bt BT_CLR    &kp PRINTSCREEN  &kp PSCRN     &kp K_VOL_UP       &kp LS(C_BRIGHTNESS_INC)    &kp C_BRIGHTNESS_INC  &kp K_VOL_UP  &kp PSCRN  &kp PRINTSCREEN  &kp PRINTSCREEN  &kp K_SLEEP
-&kp K_LOCK   &kp SYSREQ    &kp PRIOR        &kp K_MUTE    &kp K_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC        &kp C_BRIGHTNESS_DEC  &kp K_VOL_DN  &trans     &trans           &trans           &kp K_LOCK
+&kp K_LOCK   &kp SYSREQ    &kp PRIOR        &kp K_MUTE    &kp K_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC        &kp C_BRIGHTNESS_DEC  &kp K_VOL_DN  &trans     &trans           &bootloader      &kp K_LOCK
                                             &trans        &trans             &trans                      &trans                &trans        &trans
             >;
         };
