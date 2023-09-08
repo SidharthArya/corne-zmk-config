@@ -70,11 +70,10 @@
             label = "GRAVE_TAB";
             bindings =
                 <&kp GRAVE>,
-                <&kp TAB>;
+                <&kp LG(TAB)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
-            keep-mods = <(MOD_LGUI)>;
         };
     };
 
