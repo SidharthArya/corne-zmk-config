@@ -106,6 +106,26 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+        left_home: left_home {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LEFT_HOME";
+            bindings =
+                <&kp LEFT>,
+                <&kp HOME>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+        right_end: right_end {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RIGHT_END";
+            bindings =
+                <&kp RIGHT>,
+                <&kp END>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     mmv {
@@ -150,10 +170,10 @@
 
         lower_layer {
             bindings = <
-&kp PG_UP                    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp N1  &kp NUMBER_2  &kp N3           &kp F1          &kp F2      &kp F3            &kp F4           &kp F5     &kp F6
-&mod_bluetooth LCTRL BT_SEL  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp N4  &kp N5        &kp N6           &kp LEFT_ARROW  &down_page  &up_page          &kp RIGHT_ARROW  &kp PG_DN  &kp PG_UP
-&kp PG_DN                    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp N7  &kp N8        &kp N9           &kp F7          &kp F8      &kp F9            &kp F10          &kp F11    &kp F12
-                                                                          &kp N0  &kp N0        &hm LGUI HOME    &hm RGUI END    &trans      &tog_mod RCTRL 2
+&kp PG_UP                    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp N1  &kp NUMBER_2  &kp N3           &kp F1        &kp F2      &kp F3            &kp F4      &kp F5     &kp F6
+&mod_bluetooth LCTRL BT_SEL  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp N4  &kp N5        &kp N6           &left_home    &down_page  &up_page          &right_end  &kp PG_DN  &kp PG_UP
+&kp LSHIFT                   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp N7  &kp N8        &kp N9           &kp F7        &kp F8      &kp F9            &kp F10     &kp F11    &kp F12
+                                                                          &kp N0  &kp N0        &hm LGUI HOME    &hm RGUI END  &trans      &tog_mod RCTRL 2
             >;
         };
 
