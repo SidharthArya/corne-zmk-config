@@ -94,6 +94,7 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
+            masked_mods = <(MOD_LSFT)>;
         };
         down_page: down_page {
             compatible = "zmk,behavior-mod-morph";
