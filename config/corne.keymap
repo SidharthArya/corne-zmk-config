@@ -126,6 +126,116 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+        e_1: e_1 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "E_1";
+            bindings =
+                <&hl 5 E>,
+                <&kp NUMBER_1>;
+
+            #binding-cells = <0>;
+            keep-mods = <(MOD_RGUI)>;
+            mods = <(MOD_RGUI)>;
+        };
+        r_2: r_2 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "R_2";
+            bindings =
+                <&hm LSHFT R>,
+                <&kp NUMBER_2>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
+        };
+        t_3: t_3 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "T_3";
+            bindings =
+                <&hl 1 T>,
+                <&kp NUMBER_3>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
+        };
+        d_4: d_4 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "D_4";
+            bindings =
+                <&hm LALT D>,
+                <&kp NUMBER_4>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
+        };
+        f_5: f_5 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "F_5";
+            bindings =
+                <&hm LEFT_GUI F>,
+                <&kp N5>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
+        };
+        g_6: g_6 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "G_6";
+            bindings =
+                <&hl 2 G>,
+                <&kp NUMBER_6>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
+        };
+        x_7: x_7 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "X_7";
+            bindings =
+                <&kp X>,
+                <&kp N7>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
+        };
+        c_8: c_8 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "C_8";
+            bindings =
+                <&hl 4 C>,
+                <&kp N8>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
+        };
+        v_9: v_9 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "V_9";
+            bindings =
+                <&hm LEFT_SHIFT V>,
+                <&kp N9>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
+        };
+        backspace_0: backspace_0 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BACKSPACE_0";
+            bindings =
+                <&kp BACKSPACE>,
+                <&kp N0>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
+        };
     };
 
     mmv {
@@ -161,10 +271,10 @@
 
         default_layer {
             bindings = <
-&grave_tab        &hl 3 Q          &kp W        &hl 5 E         &hl 5 R       &hl 1 T                   &hl 2 Y                  &kp U            &hl 5 I          &kp O        &hl 3 P           &backslash_escape
-&hl 2 PLUS        &hl 4 A          &hm LCTRL S  &hm LEFT_ALT D  &hm LGUI F    &hl 2 G                   &hl 1 H                  &hm RGUI J       &hm RALT K       &hm RCTRL L  &hl 4 SEMICOLON   &hl 1 APOSTROPHE
-&hm LSHIFT MINUS  &hm LCTRL COMMA  &kp Z        &kp X           &hl 4 C       &hm LSHIFT V              &hm RSHIFT B             &hl 4 N          &hl 4 M          &kp TILDE    &hm RCTRL PERIOD  &hm RSHIFT SLASH
-                                                &hm LALT TAB    &hl 2 DELETE  &hm LEFT_COMMAND SPACE    &hm RIGHT_COMMAND ENTER  &hl 1 BACKSPACE  &hm RALT ESCAPE
+&grave_tab        &hl 3 Q          &kp W        &e_1          &r_2          &t_3                      &hl 2 Y                  &kp U            &hl 5 I          &kp O        &hl 3 P           &backslash_escape
+&hl 2 PLUS        &hl 4 A          &hm LCTRL S  &d_4          &f_5          &g_6                      &hl 1 H                  &hm RGUI J       &hm RALT K       &hm RCTRL L  &hl 4 SEMICOLON   &hl 1 APOSTROPHE
+&hm LSHIFT MINUS  &hm LCTRL COMMA  &kp Z        &x_7          &c_8          &v_9                      &hm RSHIFT B             &hl 4 N          &hl 4 M          &kp TILDE    &hm RCTRL PERIOD  &hm RSHIFT SLASH
+                                                &hm LALT TAB  &backspace_0  &hm LEFT_COMMAND SPACE    &hm RIGHT_COMMAND ENTER  &hl 1 BACKSPACE  &hm RALT ESCAPE
             >;
         };
 
