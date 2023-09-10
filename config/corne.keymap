@@ -134,8 +134,8 @@
                 <&kp NUMBER_1>;
 
             #binding-cells = <0>;
-            keep-mods = <(MOD_RGUI)>;
-            mods = <(MOD_RGUI)>;
+            keep-mods = <(MOD_LGUI)>;
+            mods = <(MOD_LGUI)>;
         };
         r_2: r_2 {
             compatible = "zmk,behavior-mod-morph";
