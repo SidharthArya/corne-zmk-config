@@ -229,7 +229,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "BACKSPACE_0";
             bindings =
-                <&kp BACKSPACE>,
+                <&hl 2 BACKSPACE>,
                 <&kp N0>;
 
             #binding-cells = <0>;
