@@ -225,11 +225,11 @@
             mods = <(MOD_LGUI)>;
             keep-mods = <(MOD_LGUI)>;
         };
-        backspace_0: backspace_0 {
+        del_0: del_0 {
             compatible = "zmk,behavior-mod-morph";
-            label = "BACKSPACE_0";
+            label = "DEL_0";
             bindings =
-                <&hl 2 BACKSPACE>,
+                <&hl 2 DELETE>,
                 <&kp N0>;
 
             #binding-cells = <0>;
@@ -271,10 +271,10 @@
 
         default_layer {
             bindings = <
-&grave_tab        &hl 3 Q          &kp W        &e_1          &r_2          &t_3                      &hl 2 Y                  &kp U            &hl 5 I          &kp O        &hl 3 P           &backslash_escape
-&hl 2 PLUS        &hl 4 A          &hm LCTRL S  &d_4          &f_5          &g_6                      &hl 1 H                  &hm RGUI J       &hm RALT K       &hm RCTRL L  &hl 4 SEMICOLON   &hl 1 APOSTROPHE
-&hm LSHIFT MINUS  &hm LCTRL COMMA  &kp Z        &x_7          &c_8          &v_9                      &hm RSHIFT B             &hl 4 N          &hl 4 M          &kp TILDE    &hm RCTRL PERIOD  &hm RSHIFT SLASH
-                                                &hm LALT TAB  &backspace_0  &hm LEFT_COMMAND SPACE    &hm RIGHT_COMMAND ENTER  &hl 1 BACKSPACE  &hm RALT ESCAPE
+&grave_tab        &hl 3 Q          &kp W        &e_1          &r_2    &t_3                      &hl 2 Y                  &kp U            &hl 5 I          &kp O        &hl 3 P           &backslash_escape
+&hl 2 PLUS        &hl 4 A          &hm LCTRL S  &d_4          &f_5    &g_6                      &hl 1 H                  &hm RGUI J       &hm RALT K       &hm RCTRL L  &hl 4 SEMICOLON   &hl 1 APOSTROPHE
+&hm LSHIFT MINUS  &hm LCTRL COMMA  &kp Z        &x_7          &c_8    &v_9                      &hm RSHIFT B             &hl 4 N          &hl 4 M          &kp TILDE    &hm RCTRL PERIOD  &hm RSHIFT SLASH
+                                                &hm LALT TAB  &del_0  &hm LEFT_COMMAND SPACE    &hm RIGHT_COMMAND ENTER  &hl 1 BACKSPACE  &hm RALT ESCAPE
             >;
         };
 
