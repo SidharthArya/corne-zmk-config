@@ -9,7 +9,7 @@
 #include <dt-bindings/zmk/keys.h>
 
 // #define K_FN (ZMK_HID_USAGE(HID_USAGE_GD, 151))
-#define K_FN (ZMK_HID_USAGE(HID_USAGE_KEY, 0x5E))
+#define K_FN (ZMK_HID_USAGE_ID(0x01))
 / {
     behaviors {
         new_behavior: new_behavior {
