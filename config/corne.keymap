@@ -8,21 +8,18 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
-#define C_AC_FN_KEY (ZMK_HID_USAGE(HID_USAGE_CONSUMER, 0xffed))
-#define FN_KEY (C_AC_FN_KEY)
 / {
     behaviors {
         new_behavior: new_behavior {
             compatible = "zmk,behavior-hold-tap";
             label = "NEW_BEHAVIOR";
-            bindings =
-                <&kp>,
-                <&to>;
+            bindings = <&kp>, <&to>;
 
             #binding-cells = <2>;
             tapping-term-ms = <500>;
             quick-tap-ms = <400>;
         };
+
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
@@ -30,10 +27,9 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <300>;
             flavor = "tap-preferred";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
         };
+
         hl: homerow_layers {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_LAYERS";
@@ -41,198 +37,178 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <300>;
             flavor = "tap-preferred";
-            bindings =
-                <&mo>,
-                <&kp>;
+            bindings = <&mo>, <&kp>;
         };
+
         tog_mod: tog_mod {
             compatible = "zmk,behavior-hold-tap";
             label = "TOG_MOD";
-            bindings =
-                <&kp>,
-                <&tog>;
+            bindings = <&kp>, <&tog>;
 
             #binding-cells = <2>;
             tapping-term-ms = <500>;
             quick-tap-ms = <400>;
         };
+
         mod_bluetooth: mod_bluetooth {
             compatible = "zmk,behavior-hold-tap";
             label = "MOD_BLUETOOTH";
-            bindings =
-                <&kp>,
-                <&bt>;
+            bindings = <&kp>, <&bt>;
 
             #binding-cells = <2>;
             tapping-term-ms = <400>;
             quick-tap-ms = <200>;
         };
+
         grave_tab: grave_tab {
             compatible = "zmk,behavior-mod-morph";
             label = "GRAVE_TAB";
-            bindings =
-                <&kp GRAVE>,
-                <&kp LG(TAB)>;
+            bindings = <&kp GRAVE>, <&kp LG(TAB)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
         };
+
         backslash_escape: backslash_escape {
             compatible = "zmk,behavior-mod-morph";
             label = "BACKSLASH_ESCAPE";
-            bindings =
-                <&kp BACKSLASH>,
-                <&kp RG(ESCAPE)>;
+            bindings = <&kp BACKSLASH>, <&kp RG(ESCAPE)>;
 
             #binding-cells = <0>;
             mods = <(MOD_RGUI|MOD_LGUI)>;
         };
+
         up_page: up_page {
             compatible = "zmk,behavior-mod-morph";
             label = "UP_PAGE";
-            bindings =
-                <&kp UP>,
-                <&kp PAGE_UP>;
+            bindings = <&kp UP>, <&kp PAGE_UP>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
             keep-mods = <0>;
         };
+
         down_page: down_page {
             compatible = "zmk,behavior-mod-morph";
             label = "DOWN_PAGE";
-            bindings =
-                <&kp DOWN>,
-                <&kp PAGE_DOWN>;
+            bindings = <&kp DOWN>, <&kp PAGE_DOWN>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
         left_home: left_home {
             compatible = "zmk,behavior-mod-morph";
             label = "LEFT_HOME";
-            bindings =
-                <&kp LEFT>,
-                <&kp HOME>;
+            bindings = <&kp LEFT>, <&kp HOME>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
         right_end: right_end {
             compatible = "zmk,behavior-mod-morph";
             label = "RIGHT_END";
-            bindings =
-                <&kp RIGHT>,
-                <&kp END>;
+            bindings = <&kp RIGHT>, <&kp END>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
         e_1: e_1 {
             compatible = "zmk,behavior-mod-morph";
             label = "E_1";
-            bindings =
-                <&hl 5 E>,
-                <&kp NUMBER_1>;
+            bindings = <&hl 5 E>, <&kp NUMBER_1>;
 
             #binding-cells = <0>;
             keep-mods = <(MOD_LGUI)>;
             mods = <(MOD_LGUI)>;
         };
+
         r_2: r_2 {
             compatible = "zmk,behavior-mod-morph";
             label = "R_2";
-            bindings =
-                <&hm LSHFT R>,
-                <&kp NUMBER_2>;
+            bindings = <&hm LSHFT R>, <&kp NUMBER_2>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
             keep-mods = <(MOD_LGUI)>;
         };
+
         t_3: t_3 {
             compatible = "zmk,behavior-mod-morph";
             label = "T_3";
-            bindings =
-                <&hl 1 T>,
-                <&kp NUMBER_3>;
+            bindings = <&hl 1 T>, <&kp NUMBER_3>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
             keep-mods = <(MOD_LGUI)>;
         };
+
         d_4: d_4 {
             compatible = "zmk,behavior-mod-morph";
             label = "D_4";
-            bindings =
-                <&hm LALT D>,
-                <&kp NUMBER_4>;
+            bindings = <&hm LALT D>, <&kp NUMBER_4>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
             keep-mods = <(MOD_LGUI)>;
         };
+
         f_5: f_5 {
             compatible = "zmk,behavior-mod-morph";
             label = "F_5";
-            bindings =
-                <&hm LEFT_GUI F>,
-                <&kp N5>;
+            bindings = <&hm LEFT_GUI F>, <&kp N5>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
             keep-mods = <(MOD_LGUI)>;
         };
+
         g_6: g_6 {
             compatible = "zmk,behavior-mod-morph";
             label = "G_6";
-            bindings =
-                <&hl 2 G>,
-                <&kp NUMBER_6>;
+            bindings = <&hl 2 G>, <&kp NUMBER_6>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
             keep-mods = <(MOD_LGUI)>;
         };
+
         x_7: x_7 {
             compatible = "zmk,behavior-mod-morph";
             label = "X_7";
-            bindings =
-                <&kp X>,
-                <&kp N7>;
+            bindings = <&kp X>, <&kp N7>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
             keep-mods = <(MOD_LGUI)>;
         };
+
         c_8: c_8 {
             compatible = "zmk,behavior-mod-morph";
             label = "C_8";
-            bindings =
-                <&hl 4 C>,
-                <&kp N8>;
+            bindings = <&hl 4 C>, <&kp N8>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
             keep-mods = <(MOD_LGUI)>;
         };
+
         v_9: v_9 {
             compatible = "zmk,behavior-mod-morph";
             label = "V_9";
-            bindings =
-                <&hm LEFT_SHIFT V>,
-                <&kp N9>;
+            bindings = <&hm LEFT_SHIFT V>, <&kp N9>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
             keep-mods = <(MOD_LGUI)>;
         };
+
         del_0: del_0 {
             compatible = "zmk,behavior-mod-morph";
             label = "DEL_0";
-            bindings =
-                <&hl 2 DELETE>,
-                <&kp N0>;
+            bindings = <&hl 2 DELETE>, <&kp N0>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
@@ -275,7 +251,7 @@
             bindings = <
 &grave_tab        &hl 3 Q          &kp W        &e_1          &r_2    &t_3                      &hl 2 Y                  &kp U            &hl 5 I          &kp O        &hl 3 P           &backslash_escape
 &hl 2 PLUS        &hl 4 A          &hm LCTRL S  &d_4          &f_5    &g_6                      &hl 1 H                  &hm RGUI J       &hm RALT K       &hm RCTRL L  &hl 4 SEMICOLON   &hl 1 APOSTROPHE
-&hm LSHIFT MINUS  &hm LCTRL COMMA  &hm C_AC_FN_KEY Z        &x_7          &c_8    &v_9                      &hm RSHIFT B             &hl 4 N          &hl 4 M          &kp TILDE    &hm RCTRL PERIOD  &hm RSHIFT SLASH
+&hm LSHIFT MINUS  &hm LCTRL COMMA  &hm GLOBE Z  &x_7          &c_8    &v_9                      &hm RSHIFT B             &hl 4 N          &hl 4 M          &kp TILDE    &hm RCTRL PERIOD  &hm RSHIFT SLASH
                                                 &hm LALT TAB  &del_0  &hm LEFT_COMMAND SPACE    &hm RIGHT_COMMAND ENTER  &hl 1 BACKSPACE  &hm RALT ESCAPE
             >;
         };
