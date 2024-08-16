@@ -211,7 +211,7 @@
         del_0: del_0 {
             compatible = "zmk,behavior-mod-morph";
             label = "DEL_0";
-            bindings = <&hm LEFT_COMMAND DELETE>, <&kp N0>;
+            bindings = <&hl 2 DELETE>, <&kp N0>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
@@ -254,8 +254,8 @@
             bindings = <
 &grave_tab        &hl 3 Q          &kp W        &e_1          &r_2    &t_3                      &hl 2 Y                  &kp U            &hl 5 I          &kp O        &hl 3 P           &backslash_escape
 &hl 2 PLUS        &hl 4 A          &hm LCTRL S  &d_4          &f_5    &g_6                      &hl 1 H                  &hm RGUI J       &hm RALT K       &hm RCTRL L  &hl 4 SEMICOLON   &hl 1 APOSTROPHE
-&hm LSHIFT MINUS  &hm LCTRL COMMA  &hm K_FN Z  &x_7          &c_8    &v_9                      &hl 1 B             &hl 4 N          &hl 4 M           &hm RSHIFT SLASH   &hm RCTRL PERIOD &hm K_FN TILDE 
-                                                &hm LCTRL TAB  &del_0  &hm LALT SPACE    &hm LALT ENTER  &hm RIGHT_COMMAND BACKSPACE  &hm RCTRL ESCAPE
+&hm LALT MINUS  &hm LSHIFT COMMA  &hm K_FN Z  &x_7          &c_8    &v_9                      &hl 1 B             &hl 4 N          &hl 4 M           &hm RSHIFT SLASH   &hm RCTRL PERIOD &hm K_FN TILDE 
+                                                &hm LCTRL TAB  &del_0  &hm LEFT_COMMAND SPACE    &hm RIGHT_COMMAND ENTER  &hl 1 BACKSPACE  &hm RALT ESCAPE
             >;
         };
 
@@ -270,9 +270,9 @@
 
         raise_layer {
             bindings = <
-&kp TAB    &kp EXCL  &kp AT            &kp HASH           &kp DLLR  &kp PRCNT    &kp EXCLAMATION  &kp AT_SIGN   &kp HASH              &kp PLUS               &kp EQUAL       &kp ESCAPE
-&kp LCTRL  &trans    &trans            &trans             &trans    &trans       &kp DOLLAR       &kp PERCENT   &kp CARET             &kp MINUS              &kp UNDERSCORE  &kp BACKSLASH
-&kp LSHFT  &trans    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans    &trans       &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE        &kp SLASH
+&kp TAB    &kp SINGLE_QUOTE  &kp SLASH            &kp HASH           &kp DLLR  &kp PRCNT    &kp EXCLAMATION  &kp AT_SIGN   &kp HASH              &kp PLUS               &kp EQUAL       &kp ESCAPE
+&kp LCTRL  &kp DOUBLE_QUOTE    &kp BACKSLASH            &trans             &trans    &trans       &kp DOLLAR       &kp PERCENT   &kp CARET             &kp MINUS              &kp UNDERSCORE  &kp BACKSLASH
+&kp LSHFT  &kp PIPE    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans    &trans       &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE        &kp SLASH
                                        &tog_mod LCTRL 1   &trans    &trans       &trans           &kp INSERT    &tog_mod RCTRL 2
             >;
         };
